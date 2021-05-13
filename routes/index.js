@@ -15,7 +15,9 @@ router.post('/addfile', function(req, res, next) {
   console.log("post isteği geldi");
   var obj={
     path:req.body.path,
-    id: req.body.id
+    id: req.body.id,
+    file: req.body.file,
+    name: req.body.name
   };
   req.app.locals.BC.addfile(obj,function(result){
     if(result.status){

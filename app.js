@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb'}));
+
 //app.use(bodyParser.urlencoded({ extended:false}));
 app.locals.tiles = {};
 const BC = require('./BC')
