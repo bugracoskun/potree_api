@@ -14,7 +14,6 @@ router.get('/', function(req, res, next) {
 router.post('/addfile', function(req, res, next) {
   console.log("post isteği geldi");
   var obj={
-    path:req.body.path,
     id: req.body.id,
     file: req.body.file,
     name: req.body.name
